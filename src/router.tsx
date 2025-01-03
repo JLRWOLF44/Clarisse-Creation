@@ -3,6 +3,8 @@ import App from "./App";
 import About from "./components/About/About";
 import Home from "./components/Home/Home";
 import Mycreations from "./components/Mycreations/Mycreations";
+import Favoris from "./components/Favoris/Favoris";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "Mycreations",
         element: <Mycreations />,
+      },
+      {
+        path: "Favoris",
+        element: <Favoris />,
       },
     ],
   },

@@ -6,9 +6,11 @@ function Header() {
     <header>
       <nav>
         <img
-          src="https://img.freepik.com/vecteurs-libre/degrade-illustration-oiseau-colore_343694-1741.jpg?t=st=1734345512~exp=1734349112~hmac=f4e238904694de9776157a90fbbe90f3269ffb606914d81e15af57f599aba2b1&w=740"
+          src="https://www.zarla.com/images/zarla-haut-de-couture-1x1-2400x2400-20220509-4xrw8fxmgh3vfcygcptj.png?crop=1:1,smart&width=250&dpr=2"
           alt=" logo"
         />
+
+        <h1>CLARISSE CREATION</h1>
         <a>
           <ul>
             <li>
@@ -19,6 +21,9 @@ function Header() {
             </li>
             <li>
               <NavLink to="/Mycreations"> Mycreations</NavLink>
+            </li>
+            <li>
+              <NavLink to="/Favoris"> Favoris</NavLink>
             </li>
           </ul>
         </a>
