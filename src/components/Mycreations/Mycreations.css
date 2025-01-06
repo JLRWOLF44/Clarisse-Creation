@@ -1,0 +1,14 @@
+.card-section {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+select {
+  display: block;
+  width: 100%;
+  max-width: 75px;
+  font-size: 1.2em;
+  height: 50px;
+  margin: 0 auto;
+}
