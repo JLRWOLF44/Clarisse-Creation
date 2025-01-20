@@ -4,6 +4,7 @@ import About from "./components/About/About";
 import Home from "./components/Home/Home";
 import Mycreations from "./components/Mycreations/Mycreations";
 import Favoris from "./components/Favoris/Favoris";
+import ImageDetails from "./components/ImageDetails/ImageDetails";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "Favoris",
         element: <Favoris />,
+      },
+      {
+        path: "image/:id",
+        element: <ImageDetails />,
       },
     ],
   },

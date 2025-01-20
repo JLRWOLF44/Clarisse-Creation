@@ -1,20 +1,67 @@
-nav h1 {
-  color: blue;
-  font-weight: bold;
-  flex-grow: 1; /* Permet au titre de prendre de l'espace */
-  text-align: center; /* Centre le texte */
+/* Header.css */
+header {
+	padding: 10px;
+	width: 100%;
+	position: relative;
+}
+.navebar {
+	display: flex;
+	align-items: center;
+}
+.logo-section {
+	display: flex;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  height: 20vh;
-  background-color: rgb(247, 244, 250);
+.logo-section img {
+	width: 50px; /* Ajustez cette valeur selon vos besoins */
+	height: auto;
+	margin-right: 10px;
+	position: relative;
 }
 
-nav img {
-  height: auto;
-  width: 200px;
+.title-section {
+	flex-grow: 1;
+	text-align: center;
+	position: relative;
+}
+.title-section h1 {
+	font-size: 1rem;
+	color: blue;
+	margin: 0%;
+}
+
+.nav-links-section ul {
+	display: none;
+
+	gap: 10px;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	background-color: white;
+	padding: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	z-index: 10;
+}
+.menu-burger {
+	display: block;
+	cursor: pointer;
+}
+
+@media (min-width: 600px) {
+	.nav-links-section ul {
+		display: flex; /* Afficher la navigation en ligne */
+		flex-direction: row;
+		position: static;
+		background-color: transparent;
+		box-shadow: none;
+		gap: 20px;
+	}
+
+	.menu-burger {
+		display: none; /* Masquer le menu burger sur les grands écrans */
+	}
+
+	.title-section {
+		text-align: left;
+	}
 }

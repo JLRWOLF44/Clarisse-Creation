@@ -5,6 +5,8 @@ import Cards from "../Cards/Cards";
 import data from "../../assets/data";
 import { useState } from "react";
 
+import { Link } from "react-router-dom";
+
 function Mycreations() {
   const [value, setValue] = useState("...");
 
@@ -14,6 +16,7 @@ function Mycreations() {
 
   const filterdArray =
     value !== "..." ? data.filter((el) => el.type.includes(value)) : data;
+
   return (
     <>
       <select onChange={handleSelect}>
@@ -21,11 +24,18 @@ function Mycreations() {
         <option>Mariage</option>
         <option>enfant</option>
         <option>robe</option>
+        <option>homme</option>
       </select>
 
       <section className="card-section">
         {filterdArray.map((el) => {
-          return <Cards key={el.imgSrc} imgSrc={el.imgSrc} />;
+          return (
+            <div key={el.imgSrc} className="card">
+              <Link to={`/image/${encodeURIComponent(el.imgSrc)}`}>
+                <Cards imgSrc={el.imgSrc} />
+              </Link>
+            </div>
+          );
         })}
       </section>
     </>
